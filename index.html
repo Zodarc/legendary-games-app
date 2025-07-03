@@ -8,30 +8,39 @@
   </head>
   <body>
     <header class="hero">
-      <h1>Legendary Games</h1>
-      <p>Unleash Your Power — Choose Your Game</p>
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/vid1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-content">
+        <h1>Legendary Games</h1>
+        <p>Unleash Your Power — Choose Your Game</p>
+      </div>
     </header>
 
     <main class="game-grid">
       <div class="game-card">
-        <img src="https://i.imgur.com/U7zUoRI.jpg" alt="Wukong" />
+        <img src="https://wallpapercave.com/wp/wp14354772.jpg" alt="Wukong" />
         <h2>Wukong</h2>
-        <button onclick="playSound()">View Game</button>
+        <button onclick="openModal('Wukong')">View Game</button>
       </div>
       <div class="game-card">
-        <img src="https://i.imgur.com/dA6RMRm.jpg" alt="God of War" />
+        <img
+          src="https://wallpapercave.com/wp/wp2633225.jpg"
+          alt="God of War"
+        />
         <h2>God of War</h2>
-        <button onclick="playSound()">View Game</button>
+        <button onclick="openModal('God Of War')">View Game</button>
       </div>
       <div class="game-card">
-        <img src="https://i.imgur.com/8wlCkSe.jpg" alt="Warzone" />
+        <img src="https://wallpapercave.com/wp/wp11672165.jpg" alt="Warzone" />
         <h2>Warzone</h2>
-        <button onclick="playSound()">View Game</button>
+        <button onclick="openModal('Warzone')">View Game</button>
       </div>
       <div class="game-card">
-        <img src="https://i.imgur.com/Fz3cwvT.jpg" alt="PUBG" />
+        <img src="https://wallpapercave.com/wp/wp15166459.webp" alt="PUBG" />
         <h2>PUBG</h2>
-        <button onclick="playSound()">View Game</button>
+        <button onclick="openModal('PUBG')">View Game</button>
       </div>
     </main>
 
@@ -44,5 +53,21 @@
       src="https://assets.mixkit.co/sfx/preview/mixkit-game-click-1114.mp3"
     ></audio>
     <script src="script.js"></script>
+
+    <div id="gameModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <div class="video-wrapper">
+          <iframe
+            id="modalTrailer"
+            src=""
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
