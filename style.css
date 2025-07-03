@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    color: white;
+    text-align: center;
+  }
+  
+  .hero {
+    padding: 3rem 1rem;
+    background: url('https://i.imgur.com/TrpH9db.gif') no-repeat center/cover;
+    background-blend-mode: overlay;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+    color: #ccc;
+  }
+  
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+  }
+  
+  .game-card {
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #00ffe0;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00ffee;
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  
+  .game-card h2 {
+    margin: 0.5rem 0;
+  }
+  
+  .game-card button {
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .game-card button:hover {
+    background: #00ffaa;
+  }
+  
+  footer {
+    background: #000;
+    padding: 1rem;
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
