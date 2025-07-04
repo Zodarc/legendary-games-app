@@ -6,14 +6,14 @@ function playSound() {
   
   const trailers = {
     "Wukong": {
-      title: "Wukong",
+      title: "Black Myth: Wukong - Pre-Order CG Trailer | PS5 Games",
       desc: "Black Myth: Wukong is an action RPG based on Journey to the West.",
-      url: "https://www.youtube.com/embed/KxqdRFfBFCU"
+      url: "https://www.youtube.com/embed/u83VdXAVq08"
     },
     "God of War": {
-      title: "God of War",
+      title: "God of War Ragnarök - &quot;Father and Son&quot; Cinematic Trailer | PS5 &amp; PS4 Games",
       desc: "Kratos returns in this epic Norse mythology-based saga.",
-      url: "https://www.youtube.com/embed/EE-4GvjKcfs"
+      url: "https://www.youtube.com/embed/dIQGI36BxDE"
     },
     "Warzone": {
       title: "Call of Duty: Warzone",
