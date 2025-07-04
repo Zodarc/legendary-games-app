@@ -5,53 +5,248 @@ body {
     color: white;
     text-align: center;
   }
+  /* 🔳 HUD Nav */
+.hud-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.9);
+  padding: 0.75rem 1.5rem;
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-logo img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.nav-title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #cccccc;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-icon {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: #fff;
+}
+
+.nav-lang {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #eee;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  font-family: 'Titillium Web', sans-serif;
+  cursor: pointer;
+}
+
+.nav-lang:focus {
+  outline: none;
+}
+
+.nav-btn {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.nav-btn:hover {
+  background: #4f46e5;
+}
+
+
   
   .hero {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  max-width: 760px;
+  z-index: 2;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6); /* Optional: soft dark panel */
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 80px;
+}
+
+.hero-logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-logo-title img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #dddddd;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-btn {
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn.primary {
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
+.cta-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+
+/* Animations */
+@keyframes fadeInTitle {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Optional fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
   }
-  
-  .hero-video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    filter: brightness(0.4);
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.3rem;
-    color: #ccc;
-  }
-  
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .hero p {
-    font-size: 1.3rem;
-    color: #ccc;
-  }
+}
+
   
   .game-grid {
     display: grid;

@@ -5,18 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Legendary Games</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="hero">
-      <video autoplay muted loop playsinline class="hero-video">
-        <source src="assets/vid1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="hero-content">
-        <h1>Legendary Games</h1>
-        <p>Unleash Your Power — Choose Your Game</p>
+    <header class="hud-nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="assets/logo.png" alt="Game Hub Logo" />
+          <span class="nav-title">Game Hub</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#games">Games</a>
+          <a href="#trailer">Trailers</a>
+          <a href="#gear">Gear</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="nav-icon" title="Search">🔍</button>
+          <select class="nav-lang" title="Language">
+            <option>EN</option>
+            <option>FR</option>
+            <option>JP</option>
+          </select>
+          <button class="nav-btn">Sign In</button>
+        </div>
       </div>
     </header>
+
+    <section class="hero">
+      <!-- Background video -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/vid1.mp4" type="video/mp4" />
+        <img src="assets/hero-fallback.jpg" alt="Legendary Hero Image" />
+      </video>
+
+      <!-- Clean UI on top -->
+      <div class="hero-content">
+        <div class="hero-logo-title">
+          <img src="assets/logo.png" alt="Game Hub Logo" />
+          <span class="logo-text">Game Hub</span>
+        </div>
+
+        <h1 class="hero-title">Legendary Games</h1>
+        <p class="hero-subtitle">
+          Gear Up. Dive In. Experience Every Trailer Like a Boss.
+        </p>
+
+        <p class="hero-description">
+          Welcome to Game Hub — your ultimate gateway to top-tier titles,
+          jaw-dropping trailers, and legendary loadouts. Whether you're hunting
+          for the next big release or reliving iconic battles, this is your
+          arena.<br />Stay sharp. Stay legendary.
+        </p>
+
+        <div class="cta-buttons">
+          <a href="#games"
+            ><button class="cta-btn primary">🚀 Get the Game</button></a
+          >
+          <a href="#trailer"
+            ><button class="cta-btn secondary">🎬 Watch Trailer</button></a
+          >
+        </div>
+      </div>
+    </section>
 
     <main class="game-grid">
       <div class="game-card">
@@ -249,7 +308,8 @@
     </main>
 
     <footer>
-      <p>🎮 Gear Up Now | Powered by Legendary Gamer</p>
+      <p>&copy; 2025 Legendary Games • Powered by Zodarc</p>
+      <p><small>Affiliate links may earn us commission</small></p>
     </footer>
 
     <audio
