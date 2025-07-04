@@ -13,12 +13,20 @@
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="hud-nav">
       <div class="nav-container">
         <div class="nav-logo">
-          <img src="assets/logo.png" alt="Game Hub Logo" />
+          <img src="assets/news1.jpg" alt="Game Hub Logo" />
           <span class="nav-title">Game Hub</span>
         </div>
         <nav class="nav-links">
@@ -50,7 +58,7 @@
       <!-- Clean UI on top -->
       <div class="hero-content">
         <div class="hero-logo-title">
-          <img src="assets/logo.png" alt="Game Hub Logo" />
+          <img src="assets/news1.jpg" alt="Game Hub Logo" />
           <span class="logo-text">Game Hub</span>
         </div>
 
@@ -68,11 +76,108 @@
 
         <div class="cta-buttons">
           <a href="#games"
-            ><button class="cta-btn primary">🚀 Get the Game</button></a
+            ><button class="cta-btn primary">Get the Game</button></a
           >
           <a href="#trailer"
-            ><button class="cta-btn secondary">🎬 Watch Trailer</button></a
+            ><button class="cta-btn secondary">Watch Trailer</button></a
           >
+        </div>
+      </div>
+    </section>
+
+    <section class="news-showcase" id="news">
+      <div class="news-header">
+        <h2>Game Hub News</h2>
+        <p>Featured updates, reveals, and gear drops — fresh from the vault.</p>
+      </div>
+
+      <!-- Swiper Wrapper -->
+      <div class="swiper news-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide news-card">
+            <img src="assets/news1.jpg" alt="News 1" />
+            <span class="news-tag">Update</span>
+            <h3>Modern Warfare III Gets Major Tuning Patch</h3>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide news-card">
+            <img src="assets/news1.jpg" alt="News 2" />
+            <span class="news-tag">Gear</span>
+            <h3>Top 5 Gaming Mice Used by Pro Streamers</h3>
+            <a href="#" class="read-link">Read Article →</a>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide news-card">
+            <img src="assets/news1.jpg" alt="News 3" />
+            <span class="news-tag">Trailer</span>
+            <h3>Wukong Cinematic Trailer Hits 4M Views</h3>
+            <a href="#" class="read-link">Watch Now →</a>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="features-section" id="gear">
+      <div class="features-container">
+        <h2 class="section-title">Game Hub Gear</h2>
+        <p class="section-subtitle">
+          Curated tools, setups, and gadgets for the modern gamer. Built for
+          peak performance.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <img src="assets/keyboard.png" alt="Gaming Keyboard" />
+            <h3>Precision Keyboards</h3>
+            <p>Feel every key. Built for speed and designed for dominance.</p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/mouse.png" alt="Gaming Mouse" />
+            <h3>Pro-Level Mice</h3>
+            <p>
+              Lightweight. Ultra-fast tracking. Engineered for elite gameplay.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/headset.png" alt="Headset" />
+            <h3>Immersive Audio</h3>
+            <p>
+              From enemy footsteps to cinematic soundtracks — hear everything.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/chair.png" alt="Gaming Chair" />
+            <h3>Ergonomic Chairs</h3>
+            <p>Stay locked in for hours with pro-level posture and comfort.</p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/controller.png" alt="Controller" />
+            <h3>Next-Gen Controllers</h3>
+            <p>
+              Haptic feedback, trigger tension, total control in your hands.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <img src="assets/monitor.png" alt="Gaming Monitor" />
+            <h3>High Refresh Displays</h3>
+            <p>144Hz+. Tear-free visuals. Built for every clutch moment.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -333,5 +438,32 @@
         </div>
       </div>
     </div>
+    <script>
+      const swiper = new Swiper(".news-swiper", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

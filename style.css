@@ -247,6 +247,148 @@ body {
   }
 }
 
+.news-showcase {
+  background: #0d0d0d;
+  padding: 4rem 2rem;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.news-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.news-header h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.news-header p {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+  font-weight: 400;
+}
+
+.swiper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+}
+
+.news-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.news-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #999;
+  padding: 0.75rem 1rem 0 1rem;
+  font-weight: 600;
+}
+
+.news-card h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.read-link {
+  font-size: 0.9rem;
+  color: #8b5cf6;
+  padding: 0 1rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.read-link:hover {
+  color: #a78bfa;
+}
+
+.features-section {
+  background-color: #121212;
+  padding: 4rem 2rem;
+  color: #ffffff;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #bbbbbb;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: #1b1b1b;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.3));
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
   
   .game-grid {
     display: grid;
